@@ -1,0 +1,41 @@
+body{
+
+    .Bloque-Main-About{
+        display: grid;
+        justify-items: center;
+
+        .Bloque-Main-About--Img{
+            width: 100%;
+            
+            img{
+                @include sizes(100%, 50vh);
+                object-fit: cover;
+                object-position: 0% 25%;
+                }
+        }
+
+        .Bloque-Main-About--Frase{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 5% 10%;
+            color: $colorprimario;
+            text-align: justify;
+            justify-content: center;
+
+            h1{
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+}
+
+

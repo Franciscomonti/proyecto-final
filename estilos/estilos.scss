@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+$colorprimario: white;
+$colorsecundario: #f77f00;
+$colorterciario: black;
+
+@mixin sizes($largo, $alto){
+    width: $largo;
+    height: $alto;
+}
+
+body{
+    background-color: $colorterciario;
+    
+    // barra de navegacion principal 
+
+    .Nav-Bar{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        position: fixed;
+        z-index: 1000;
+        opacity: .9;
+        backdrop-filter: blur(30px);
+        box-shadow: 2px 2px 10px;
+        
+
+
+        .Nav-Bar--Logo{
+            margin: 10px 0px;
+            animation: rotationy 7s infinite linear;
+
+            img{
+                object-fit: cover;
+                width: 40px;
+            }
+        }
+
+        .Nav-Bar--List{
+            width: 50%;
+            height: 25px;
+            display: flex;  
+            justify-content: space-around;
+            margin: auto 0px;
+            
+
+            .Nav-Bar--Link{
+                list-style: none;
+                &:hover{
+                    border-bottom: 2px $colorsecundario solid;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $colorprimario;
+                    text-align: center;
+                    padding: 5px;
+                    
+
+                    
+                }
+            }
+        }
+        
+    }
+
+    // carousel de imagenes usado en fondo
+
+    .carousel{
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        
+        .carousel-inner{
+            @include sizes(100%, 100vh);
+            object-fit: cover;
+            filter: grayscale(80%);
+
+            .carousel-item{
+                object-fit: cover;
+                height: 100vh;
+
+                img{
+                object-fit: cover;
+                height: 100vh;
+                }
+            }
+        }
+    }
+
+    // Titulo de index
+
+    .titulo-Index{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        margin-top: -50px;
+        left: 50%;
+        margin-left: -160px;
+        
+        
+        h1{
+            font-size: 2rem;
+            color: $colorprimario;
+        }
+
+
+        h2{
+            font-size: 1.5rem;
+            color: $colorprimario;
+        }
+    }
+
+    // Barra de navegacion footer
+
+    .Footer{
+        width: 100%;
+        height: 60px;
+        bottom: 0%;
+        position: fixed;
+        z-index: 100;
+        opacity: .9;
+        backdrop-filter: blur(30px);
+        box-shadow: 2px 2px 10px;
+
+        .Footer--List{
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 10px auto;
+            padding: 10px;
+
+            .Footer--Link{
+                margin: 0px 2%;
+
+                a{
+                    text-decoration: none;
+                    color: $colorprimario;
+                    &:hover {
+                        color: $colorsecundario;
+                        img{
+                        animation: vibracion 0.5s linear infinite;
+                        }
+                    }
+                    
+                    
+
+                    img{
+                        object-fit: cover;
+                        width: 30px;
+                        margin-right: 10px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+// Animaciones
+
+@keyframes rotationy {
+    from {
+    transform: rotatey(0deg);
+    }
+    50% {
+    transform: rotatey(0deg);
+    }
+    to {
+    transform: rotatey(359deg);
+    }
+}
+
+@keyframes vibracion {
+    from {
+    transform: rotate(-10deg);
+    }
+    50% {
+    transform: rotate(10deg);
+    }
+    to {
+    transform: rotate(-10deg);
+    }
+}
+
+}
+
+@import "_galeria.scss" ;
+@import "_fotosvarias.scss" ;
+@import "_about.scss" ;
+@import "_contacto.scss" ;
+@import "_mediaquery.scss" ;
+
+
+
+
+
+
+
+

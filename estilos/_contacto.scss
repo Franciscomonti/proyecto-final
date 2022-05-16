@@ -1,0 +1,41 @@
+body{
+
+    .Main-Contacto{
+        display: flex;
+        margin:auto;
+        flex-direction: column;
+        width: 60%;
+        padding: 150px 0px 150px;
+
+        .Main-Contacto--leyend{
+            color: $colorprimario;
+            font-size: 24px;
+
+        }
+
+        .Main-Contacto--Form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                color: $colorprimario;
+            }
+
+            input{
+                width: 50%;
+                height: 30px;
+            }
+
+            .Main-Contacto--Btn{
+                display: flex;
+                justify-content: end;
+
+                input{
+                    width: 200px;
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }
+}

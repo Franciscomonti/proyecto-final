@@ -1,0 +1,176 @@
+@media only screen and (max-width: 1199px){
+
+    body{
+
+    
+  // carousel de imagenes usado en fondo de galeria
+
+    .carousel2{
+    display: none;
+}
+
+// menu de galeria
+
+.Menu-Polarid{
+    padding: 150px;
+    @include sizes(100%, 100%);
+    position:relative;
+
+    .Menu-Polarid--foto1, .Menu-Polarid--foto2, .Menu-Polarid--foto3{
+
+        .Menu-Polarid--Imagen{
+            @include sizes(250px, 300px);
+        }
+
+    }
+}
+
+// bloque de fotos de galeria
+
+.bloque-fotos-galeria{
+    padding: 80px 0px 60px;
+
+    span{
+        margin: 0px;
+            
+        img{
+            @include sizes(250px, 250px);
+        }
+
+    }
+}
+
+.Main-Contacto{
+    width: 90%;
+
+    .Main-Contacto--Form{
+
+        input{
+            width: 60%;
+        }
+
+        .Main-Contacto--Btn{
+
+            input{
+                margin-right: 0px;
+                &:first-child{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+}
+}
+
+
+
+@media only screen and (max-width: 700px){
+body{
+    .Nav-Bar{
+
+        .Nav-Bar--List{
+            width: 90%;
+        }
+    }
+
+    .Footer{
+
+        .Footer--List{
+            justify-content: center;
+            margin: 5px 0px;
+            padding: 5px;
+
+            .Footer--Link{
+                margin: 0px 2%;
+
+                    img{
+                        width: 25px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    
+
+      // carousel de imagenes usado en fondo de galeria
+
+    .carousel2{
+        display: none;
+    }
+
+    // menu de galeria
+
+    .Menu-Polarid{
+        padding: 150px;
+        @include sizes(100%, 100%);
+        position:relative;
+    
+        .Menu-Polarid--foto1, .Menu-Polarid--foto2, .Menu-Polarid--foto3{
+
+            .Menu-Polarid--Imagen{
+                @include sizes(250px, 300px);
+            }
+
+        }
+    }
+
+    // bloque de fotos de galeria
+
+    .bloque-fotos-galeria{
+        padding: 80px 0px 60px;
+    
+        span{
+            margin: 0px;
+                
+            img{
+                @include sizes(200px, 200px);
+            }
+    
+        }
+    }
+    
+    .Bloque-Main-About{
+        .Bloque-Main-About--Frase{
+
+            h1{
+                font-size: 30px;
+            }
+
+            p{
+                font-size: 14px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .Main-Contacto{
+        width: 90%;
+        padding: 100px 0px 100px;
+
+        .Main-Contacto--Form{
+
+            input{
+                width: 80%;
+                height: 24px;
+            }
+
+            .Main-Contacto--Btn{
+
+                input{
+                    width: 150px;
+                    margin-right: 0px;
+                    &:first-child{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+}
+
