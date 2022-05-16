@@ -10,7 +10,6 @@ body{
         .Main-Contacto--leyend{
             color: $colorprimario;
             font-size: 24px;
-
         }
 
         .Main-Contacto--Form{
@@ -22,8 +21,7 @@ body{
             }
 
             input{
-                width: 50%;
-                height: 30px;
+                @include sizes(50% , 30px)
             }
 
             .Main-Contacto--Btn{
@@ -33,7 +31,6 @@ body{
                 input{
                     width: 200px;
                     margin-right: 10px;
-
                 }
             }
         }
